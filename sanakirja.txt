@@ -1,9 +1,10 @@
-auto car  
-hevonen horse  
-lattia floor  
-seinä wall   
-ovi door  
-kirja book  
-talo house  
-puu tree  
-aurinko sun  ikkuna,window
+auto car
+hevonen horse
+lattia floor
+seinä wall
+ovi door
+kirja book
+talo house
+puu tree
+tuoli chair
+rekka truck
