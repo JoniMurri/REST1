@@ -1,6 +1,7 @@
 //Kaikki pyynnöt tulevat tämän tiedoston kautta.
 import express from "express";
 import wordsRoutes from "./routes/wordsRoute.js";
+import cors from "cors";
 // app.js
 const app = express();
 
@@ -8,14 +9,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// CORS
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+// CORS kaikille
+app.use(cors()); // sallii kaikki domainit ja kaikki metodit dev-ympäristössä
 
+app.use(
+  cors({
+    origin: "http://localhost:5174", // React-sovellus
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 // Routes
 
 app.use("/words", wordsRoutes);

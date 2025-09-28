@@ -8,3 +8,5 @@ talo house
 puu tree
 tuoli chair
 rekka truck
+kirja book
+kissa cat
