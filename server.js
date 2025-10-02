@@ -14,7 +14,7 @@ app.use(cors()); // sallii kaikki domainit ja kaikki metodit dev-ympäristössä
 
 app.use(
   cors({
-    origin: "http://localhost:5174", // React-sovellus
+    origin: "http://localhost:5173", // React-sovellus
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })

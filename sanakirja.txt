@@ -10,3 +10,7 @@ tuoli chair
 rekka truck
 kirja book
 kissa cat
+koira dog
+kirja book
+maito milk
+olut beer
